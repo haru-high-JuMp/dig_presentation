@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <title>"今日のparams"</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="styles.css" />
+  <script type="text/javascript" src="modules/lodash.full.min.js"></script>
+  <script type="text/javascript" src="modules/test-boilerplate.js"></script>
+  <script type="text/javascript" src="allDivination.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <h1 class="title">今日のparams</h1>
+  
+  <div class="explanation">
+      <p>今日1日を楽しくするためにpramsを確認してみませんか？</p>
+      <p>エンジニアの皆様が少しでもクスっとしていただけると幸いです</p>
+      
+  </div>
+
+  <div class="button">
+    <button type="button" onclick="clickDisplayAlert()" class="buttonimg" > <img src="images/kobotyan.png" height ="80" width="100" /></button>
+    <p class="button">コボちゃんをClick！</p>
+  </div>
+  
+
+  <div class="fortune" id="chart">
+    <table>
+      <thead>
+          <tr>
+            <th colspan="3">しまっていこう！！</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>総合</td>
+          <td>
+            <span id="all_rate" class="star5_rating" data-rate="4"></span>
+          </td>
+          <td id="all">コメント</td>
+        </tr>
+        <tr>
+          <td>恋愛</td>
+          <td>
+            <span id="love_rate" class="star5_rating" data-rate="2"></span>
+          </td>
+          <td id="love">コメント</td>
+        </tr>
+        <tr>
+          <td>仕事</td>
+          <td>
+            <span id="work_rate" class="star5_rating" data-rate="5"></span>
+          </td>
+          <td id="work">コメント</td>
+        </tr>
+        <tr>
+          <td>健康</td>
+          <td>
+            <span id="health_rate" class="star5_rating" data-rate="2.5"></span>
+          </td>
+          <td id="health">コメント</td>
+        </tr>
+        <tr>
+          <td>ラッキーアイテム</td>
+          <td id="item" colspan="2">アイテム</td>
+        </tr>
+        <tr>
+          <td>ラッキーカラー</td>
+          <td colspan="2">
+            <div class = "color" id="luckycolor"></div>
+            <p id="colorcode" class="color">カラーコード</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <div>
+      <p class="tweet">今日も1日楽しみながら開発してください！</p>
+      <p class="tweet">もし今日嫌な事があってもこのparamsに責任転嫁して、ハイボールでも飲もう!</p>
+      <p class="tweet">よければみんなと結果を共有してください！</p>
+      <!-- FontAwesome5.1のCDN -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+      <!-- ツイートボタン -->
+      <div class="tweet" id="tweet">
+        <button id="twitter-share-button" onclick="shareTwitter()"><i class="fab fa-twitter"></i>ツイートする</button>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        
+      </div>
+      <div class="tweet-text" id="tweet-text">
+      <!-- ここのテキストをツイートしたい -->
+      </div>
+
+      <div class="retry">
+        <button id="retry-button" onclick="retryParam()"><i class="fa-retry"></i>もう一度</button>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" id="twitter" class="twitter-share-button" data-text="これはテストです" data-show-count="false" data-size="large">Tweet</a>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+
+
+
+</body>
+
+</html>
