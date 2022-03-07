@@ -10,6 +10,8 @@ const paramObject = {
     luckColer: undefined
 }
 
+let luckItemOutput;
+
 const getRandomComents = () => {
     for (const key in paramObject) {
         if (Object.hasOwnProperty.call(paramObject, key)) {
@@ -70,12 +72,14 @@ const createChart = () => {
     document.getElementById("chart").style.display ="block";
     console.log(paramObject["luckItem"])
     if (paramObject["luckItem"].length === 3){
+        luckItemOutput = `${paramObject["luckItem"][1]}の${paramObject["luckItem"][2]}`;
         document.getElementById("item").innerHTML = `<td>${paramObject["luckItem"][1]}の${paramObject["luckItem"][2]}</td>`
     } else {
+        luckItemOutput = `${paramObject["luckItem"][1]}`;
         document.getElementById("item").innerHTML = `<td>${paramObject["luckItem"][1]}</td>`
     }
     document.getElementById("luckycolor").style.backgroundColor = paramObject["luckColer"];
-    document.getElementById("colorcode").textContent = paramObject["luckColer"]
+    document.getElementById("colorcode").textContent = paramObject["luckColer"];
     // change star rating
     document.querySelector("#all_rate").dataset.rate = String(paramObject["all"][0]);
     document.querySelector("#love_rate").dataset.rate = String(paramObject["love"][0]);
@@ -110,10 +114,16 @@ function shareTwitter(){
     // 出力結果を取得
     // let text = document.getElementById("tweet-text").innerText;
     // オプションパラメータを設定
-    let hashtags = "今日のparams";
-    let url = encodeURIComponent(location.href)  // location.hrefは今いるURL
-    let data_text = "これはテストです" + "%0D%0A" + "これもてすとだよ" + "%0D%0A"
+    // let hashtags = "今日のparams";
+    // let url = encodeURIComponent(location.href)  // location.hrefは今いるURL
+    let data_text = 
+        "総合：" + paramObject["all"][1] + "%0D%0A" + 
+        "恋愛：" + paramObject["love"][1] + "%0D%0A" +
+        "仕事：" + paramObject["work"][1] + "%0D%0A" +
+        "健康：" + paramObject["health"][1] + "%0D%0A" +
+        "アイテム：" + luckItemOutput + "%0D%0A" +
+        "カラー：" + paramObject["luckColer"];
 
     // URLを生成して遷移
-    window.open("https://twitter.com/share?text=" + data_text + "&hashtags=" + hashtags + "&url=" + url);
+    window.open("https://twitter.com/share?text=" + data_text);
 }
