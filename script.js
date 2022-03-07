@@ -116,13 +116,14 @@ function shareTwitter(){
     // オプションパラメータを設定
     // let hashtags = "今日のparams";
     // let url = encodeURIComponent(location.href)  // location.hrefは今いるURL
+    console.log(paramObject["luckColer"])
     let data_text = 
         "総合：" + paramObject["all"][1] + "%0D%0A" + 
         "恋愛：" + paramObject["love"][1] + "%0D%0A" +
         "仕事：" + paramObject["work"][1] + "%0D%0A" +
         "健康：" + paramObject["health"][1] + "%0D%0A" +
         "アイテム：" + luckItemOutput + "%0D%0A" +
-        "カラー：" + paramObject["luckColer"];
+        "カラー：＃" + paramObject["luckColer"].slice(1) + "%0D%0A";
 
     // URLを生成して遷移
     window.open("https://twitter.com/share?text=" + data_text);
