@@ -23,7 +23,7 @@
   </div>
 
   <div class="button">
-    <button type="button" onclick="clickDisplayAlert()" class="buttonimg" > 
+    <button type="button" onclick="clickDisplayAlert()" id="buttonimg"> 
       <img src="images/kobotyan.png" height ="80" width="100" />
       <font size="3">Click</font>
     </button>
@@ -31,56 +31,57 @@
   </div>
   
 
-  <div class="fortune" id="chart">
-    <table>
-      <thead>
+  <div id="chart">
+    <div class="fortune">
+      <table align="center">
+        <thead>
+            <tr>
+              <th colspan="3">しまっていこう！！</th>
+            </tr>
+        </thead>
+        <tbody>
           <tr>
-            <th colspan="3">しまっていこう！！</th>
+            <td align="center" class="fortune_element">総合</td>
+            <td align="center">
+              <span id="all_rate" class="star5_rating" data-rate="4"></span>
+            </td>
+            <td id="all">コメント</td>
           </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td align="center" class="fortune_element">総合</td>
-          <td align="center">
-            <span id="all_rate" class="star5_rating" data-rate="4"></span>
-          </td>
-          <td id="all">コメント</td>
-        </tr>
-        <tr>
-          <td align="center" class="fortune_element">恋愛</td>
-          <td align="center">
-            <span id="love_rate" class="star5_rating" data-rate="2"></span>
-          </td>
-          <td id="love">コメント</td>
-        </tr>
-        <tr>
-          <td align="center" class="fortune_element">仕事</td>
-          <td align="center">
-            <span id="work_rate" class="star5_rating" data-rate="5"></span>
-          </td>
-          <td id="work">コメント</td>
-        </tr>
-        <tr>
-          <td align="center" class="fortune_element">健康</td>
-          <td align="center">
-            <span id="health_rate" class="star5_rating" data-rate="2.5"></span>
-          </td>
-          <td id="health">コメント</td>
-        </tr>
-        <tr>
-          <td align="center" class="fortune_element">ラッキーアイテム</td>
-          <td id="item" colspan="2">アイテム</td>
-        </tr>
-        <tr>
-          <td align="center" class="fortune_element">ラッキーカラー</td>
-          <td colspan="2">
-            <div class = "color" id="luckycolor"></div>
-            <p id="colorcode" class="color">カラーコード</p>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    
+          <tr>
+            <td align="center" class="fortune_element">恋愛</td>
+            <td align="center">
+              <span id="love_rate" class="star5_rating" data-rate="2"></span>
+            </td>
+            <td id="love">コメント</td>
+          </tr>
+          <tr>
+            <td align="center" class="fortune_element">仕事</td>
+            <td align="center">
+              <span id="work_rate" class="star5_rating" data-rate="5"></span>
+            </td>
+            <td id="work">コメント</td>
+          </tr>
+          <tr>
+            <td align="center" class="fortune_element">健康</td>
+            <td align="center">
+              <span id="health_rate" class="star5_rating" data-rate="2.5"></span>
+            </td>
+            <td id="health">コメント</td>
+          </tr>
+          <tr>
+            <td align="center" class="fortune_element">ラッキーアイテム</td>
+            <td id="item" colspan="2">アイテム</td>
+          </tr>
+          <tr>
+            <td align="center" class="fortune_element">ラッキーカラー</td>
+            <td colspan="2">
+              <div class = "color" id="luckycolor"></div>
+              <p id="colorcode" class="color">カラーコード</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div>
       <p class="tweet">今日も1日楽しみながら開発してください！</p>
       <p class="tweet">もし今日嫌な事があってもこのparamsに責任転嫁して、ハイボールでも飲もう!</p>

@@ -1,5 +1,5 @@
 body {
-    background-color: #f1f7fa;
+    background-color: #f3f9fa;
 }
 
 h1 {
@@ -13,7 +13,7 @@ h1 {
 table,
 td {
     border: 1px solid rgb(143, 122, 6);
-    padding : 20px 10px;
+    /* padding : 20px 10px; */
 }
 
 thead,
@@ -23,10 +23,10 @@ tfoot {
     padding : 20px 10px;
 }
 
-table{
-    width: 80%;
-    margin-left: 70px;
-}
+/* table{
+    width: 60%;
+    margin-left: 200px;
+} */
 
 
 .fortune_element{
@@ -41,31 +41,27 @@ td{
 width: 10%;
 } */
 
-.buttonimg {
-    border-color: rgb(241, 211, 109);
-    background:rgb(245, 239, 209);
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: 400px;
-    margin-top: 40px;
+div.button {
+    text-align: center;
+    /* margin-left: 400px;
+    margin-top: 40px; */
 }
 
-.button {
-    
-    display: inline-block;
-    text-decoration: none;
-    font-size: 25px;
-    font-weight: 300;
+#buttonimg {
+    border-color: rgb(241, 211, 109);
+    background:rgb(245, 239, 209);
 }
-p.button {
+
+.fortune{
+    margin-top: 30px;
     text-align: center;
 }
 
 /* 表を消しとくやつ */
 #chart {
     display: none;
-    margin-top: 30px;
-    margin-left: 50px;
+    
+    /* margin-left: 50px; */
 }
 
 #luckycolor {
@@ -77,10 +73,6 @@ p.button {
 .color {
     display: inline-block;
     text-align: center;
-}
-
-p.color {
-    margin: 0px;
 }
 
 .star5_rating{
